@@ -39,4 +39,18 @@
     <string name="logout">Logout</string>
     <string name="offers">Offers</string>
     <string name="favorite">Favorite</string>
+    <string name="market_for_used">Market for used</string>
+    <string name="create_ad_now_for_free">Create ad now for free</string>
+    <string name="supermarkets">Supermarkets</string>
+    <string name="most_common_shops">Most common shops</string>
+    <string name="offers_and_sales">Offers and sales</string>
+    <string name="search">Search....</string>
+    <string name="pharmacies">Pharmacies</string>
+    <string name="orders">Orders</string>
+    <string name="used_products">Used products</string>
+    <string name="contact_us">Contact us</string>
+    <string name="account">Account</string>
+    <string name="products">Products</string>
+    <string name="services">Services</string>
+    <string name="shops">Shops</string>
 </resources>

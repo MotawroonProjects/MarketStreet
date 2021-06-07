@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:id="@+id/flSlider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ProgressBar
+                    android:id="@+id/progBarSlider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginTop="8dp"
+
+                >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:src="@drawable/market"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="14dp"
+                        android:textColor="@color/black"
+                        android:text="@string/supermarkets"/>
+                </FrameLayout>
+
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:src="@drawable/pharmacy"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="14dp"
+                        android:textColor="@color/black"
+                        android:text="@string/pharmacies"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:src="@drawable/dept_bg"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="14dp"
+                        android:textColor="@color/black"
+                        android:text="@string/market_for_used"/>
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/color2"
+                android:layout_marginTop="8dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/services"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recViewService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/progBarService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+
+                        />
+
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:minHeight="200dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/shops"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:minHeight="200dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recViewShops"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/progBarShops"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+
+                        />
+
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

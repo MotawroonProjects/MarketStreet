@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="lang"
+            type="String" />
+
+
+        <import type="android.view.View" />
+        <variable
+            name="model"
+            type="com.app.market_street.models.UserModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/llData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:visibility='@{model==null?View.GONE:View.VISIBLE,default=visible}'
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_avatar"
+                    />
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="0dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:gravity="start"
+                        android:textStyle="bold"
+                        android:textAlignment="viewStart"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="start"
+                        android:textAlignment="viewStart"
+                        android:layout_marginTop="8dp"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_order"
+                    android:padding="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray11"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="16sp"
+                    android:text="@string/orders"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/horizontal_lin"
+                android:layerType="software"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_used_pro"
+                    android:padding="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray11"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="16sp"
+                    android:text="@string/used_products"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/horizontal_lin"
+                android:layerType="software"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_update"
+                    android:padding="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray11"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="16sp"
+                    android:text="@string/update_profile"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/horizontal_lin"
+                android:layerType="software"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_logout"
+                    android:padding="3dp"
+                    android:rotation="270"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray11"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="16sp"
+                    android:text="@string/logout"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/contact_us"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16sp"
+                >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/facebook"
+                    android:padding="5dp"
+
+                    />
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="0dp"/>
+
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/instagram"
+                    android:padding="5dp"
+
+                    />
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="0dp"/>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/twitter"
+                    android:padding="5dp"
+
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</layout>

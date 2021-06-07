@@ -39,4 +39,19 @@
     <string name="logout">خروج</string>
     <string name="offers">العروض</string>
     <string name="favorite">المفضلة</string>
+    <string name="market_for_used">سوق المستعمل</string>
+    <string name="create_ad_now_for_free">انشئ اعلانك الآن مجانا</string>
+    <string name="supermarkets">سوبرماركت</string>
+    <string name="most_common_shops">أشهر المحلات</string>
+    <string name="offers_and_sales">عروض وخصومات</string>
+    <string name="search">بتدور على اية</string>
+    <string name="pharmacies">الصيدليات</string>
+    <string name="orders">الطلبات</string>
+    <string name="used_products">منتجاتي المستعملة</string>
+    <string name="contact_us">إتصل بنا</string>
+    <string name="account">حسابي</string>
+    <string name="products">منتجاتي</string>
+    <string name="services">خدمات</string>
+    <string name="shops">محلات</string>
+
 </resources>
