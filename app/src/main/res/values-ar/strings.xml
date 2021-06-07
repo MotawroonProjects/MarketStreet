@@ -54,4 +54,20 @@
     <string name="services">خدمات</string>
     <string name="shops">محلات</string>
 
+    <string name="recently">الاحدث</string>
+    <string name="low_price">الاقل سعر</string>
+    <string name="high_price">الاعلى سعر</string>
+    <string name="all">الكل</string>
+    <string name="ch_image">اختر صوره</string>
+    <string name="ch_dept">اختر القسم</string>
+    <string name="add_a_used_product">اضافة منتج مستعمل</string>
+    <string name="product_images">صور المنتج</string>
+    <string name="category">القسم</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="location">الموقع</string>
+    <string name="whats_app_number">رقم الواتس</string>
+    <string name="price">السعر</string>
+    <string name="description">المواصفات</string>
+    <string name="publish">نشر</string>
+    <string name="select_the_address">حدد العنوان</string>
 </resources>

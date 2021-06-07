@@ -20,6 +20,7 @@ import com.app.market_street.models.SliderModel;
 import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
 import com.app.market_street.uis.activity_home.HomeActivity;
+import com.app.market_street.uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,13 @@ public class Fragment_Home extends Fragment {
         binding.recViewOffers.setLayoutManager(new LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false));
         offerAdapter = new OfferAdapter(new ArrayList<>(),activity,this);
         binding.recViewOffers.setAdapter(offerAdapter);
-
+binding.cardMarketUse.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(activity, SeconedHandMarketFilterActivity.class);
+        startActivity(intent);
+    }
+});
 
     }
 

@@ -24,6 +24,18 @@
         tools:targetApi="m"
         >
         <activity
+            android:name=".uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".uis.activity_map.MapActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".uis.activity_add_products.AddProductActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".uis.activity_home.HomeActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:screenOrientation="portrait"
@@ -35,6 +47,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/mdtp_deleted_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
