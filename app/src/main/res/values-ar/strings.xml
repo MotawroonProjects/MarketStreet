@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">ريك تك</string>
     <string name="field_required">الحقل مطلوب</string>
+    <string name="map_api_key">AIzaSyAnjvMAJEmiAv3yeCDUXWv-PboXiT_uaoQ</string>
+
     <string name="inv_email">ايميل خاطئ</string>
     <string name="phone">رقم الجوال</string>
     <string name="login">دخول</string>
@@ -70,4 +72,9 @@
     <string name="description">المواصفات</string>
     <string name="publish">نشر</string>
     <string name="select_the_address">حدد العنوان</string>
+    <string name="sign_up">إنشاء حساب</string>
+    <string name="whatsapp_number">واتس اب</string>
+    <string name="bio">نبذة مختصرة</string>
+    <string name="service_price">سعر الخدمة</string>
+    <string name="market_name">إسم المتجر</string>
 </resources>

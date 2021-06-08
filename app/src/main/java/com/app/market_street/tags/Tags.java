@@ -9,6 +9,6 @@ public class Tags {
     public static final String not_tag = "rick_tech_not_tag";
     public static final int not_id = 3254;
 
-
+//streetmarket70
 
 }

@@ -148,7 +148,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             }
         });
 
-
+        binding.llBack.setOnClickListener(v -> finish());
         updateUI();
         CheckPermission();
     }
@@ -208,7 +208,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         String fields = "id,place_id,name,geometry,formatted_address";
 
         Api.getService("https://maps.googleapis.com/maps/api/")
-                .searchOnMap("textquery", query, fields, lang, getString(R.string.about_us))
+                .searchOnMap("textquery", query, fields, lang, getString(R.string.map_api_key))
                 .enqueue(new Callback<PlaceMapDetailsData>() {
                     @Override
                     public void onResponse(Call<PlaceMapDetailsData> call, Response<PlaceMapDetailsData> response) {
@@ -253,7 +253,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         binding.progBar.setVisibility(View.VISIBLE);
         String location = lat + "," + lng;
         Api.getService("https://maps.googleapis.com/maps/api/")
-                .getGeoData(location, lang, getString(R.string.about_us))
+                .getGeoData(location, lang, getString(R.string.map_api_key))
                 .enqueue(new Callback<PlaceGeocodeData>() {
                     @Override
                     public void onResponse(Call<PlaceGeocodeData> call, Response<PlaceGeocodeData> response) {

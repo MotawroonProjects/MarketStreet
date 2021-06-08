@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">RickTech</string>
     <string name="field_required">Field Required</string>
+    <string name="map_api_key">AIzaSyAnjvMAJEmiAv3yeCDUXWv-PboXiT_uaoQ</string>
+
     <string name="inv_email">Invalid Email</string>
     <string name="phone">Phone number</string>
     <string name="login">Login</string>
@@ -69,4 +71,9 @@
     <string name="products">Products</string>
     <string name="services">Services</string>
     <string name="shops">Shops</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="whatsapp_number">WhatsApp number</string>
+    <string name="bio">bio</string>
+    <string name="service_price">Service price</string>
+    <string name="market_name">Market name</string>
 </resources>

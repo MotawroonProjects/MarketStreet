@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <data>
+        <variable
+            name="lang"
+            type="String" />
+        <variable
+            name="model"
+            type="com.app.market_street.models.MarketSignUpModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".uis.activity_login.ClientLoginActivity">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="14dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_left_arrow"
+                    android:padding="4dp"
+                    android:rotation='@{lang.equals("ar")?180:0}'
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/cardViewBack"
+                app:layout_constraintBottom_toBottomOf="@id/cardViewBack"
+                app:layout_constraintStart_toEndOf="@id/cardViewBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".45"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@string/sign_up"
+
+                />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/cardViewBack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fillViewport="true"
+                >
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    >
+                    <FrameLayout
+                        android:id="@+id/flImage"
+                        android:layout_width="124dp"
+                        android:layout_height="124dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/market_logo"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp"
+                            />
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="bottom"
+                            android:src="@drawable/circle_edit"
+                            />
+                    </FrameLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:startIconDrawable="@drawable/ic_user"
+                        app:startIconTint="@color/black"
+                        app:hintEnabled="false"
+                        app:passwordToggleEnabled="false"
+                        android:background="@color/white"
+                        app:prefixTextColor="@color/black"
+                        >
+                        <EditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:hint="@string/market_name"
+                            android:text="@={model.name}"
+                            error="@{model.error_name}"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        >
+                        <Space
+                            android:layout_width="12dp"
+                            android:layout_height="0dp"/>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_dept"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/spinnerDepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:backgroundTint="@color/black"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray14"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        >
+                        <Space
+                            android:layout_width="12dp"
+                            android:layout_height="0dp"/>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_dept"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/spinnerSubDepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:backgroundTint="@color/black"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray14"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:startIconDrawable="@drawable/ic_call4"
+                        app:startIconTint="@color/black"
+                        app:hintEnabled="false"
+                        app:passwordToggleEnabled="false"
+                        android:background="@color/white"
+                        app:prefixText="+20"
+                        app:prefixTextColor="@color/black"
+                        android:layout_marginTop="8dp"
+
+                        >
+                        <EditText
+                            android:id="@+id/edtPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:hint="@string/phone"
+                            android:text="@={model.phone}"
+                            error="@{model.error_phone}"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        >
+                        <Space
+                            android:layout_width="12dp"
+                            android:layout_height="0dp"/>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_pin"
+                            android:padding="3dp"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:hint="@string/address"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:text="@={model.address}"
+                            error="@{model.error_address}"
+                            />
+                        <ImageView
+                            android:id="@+id/imageMap"
+                            android:layout_width="38dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/location"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray14"/>
+
+
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/small_rounded_primary"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:text="@string/sign_up"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@color/trans_black"
+            android:padding="16dp"
+            app:el_duration="800"
+            app:el_expanded="false"
+            app:el_parallax=".5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/flGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:longClickable="false"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_gallery"
+                            app:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/gallery"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:longClickable="false"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_camera"
+                            app:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/camera"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </FrameLayout>
+
+</layout>

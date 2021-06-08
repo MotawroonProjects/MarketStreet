@@ -9,6 +9,9 @@
         <variable
             name="lang"
             type="String" />
+        <variable
+            name="model"
+            type="com.app.market_street.models.ClientLoginModel" />
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -84,6 +87,8 @@
                     android:textSize="14sp"
                     android:inputType="number"
                     android:hint="@string/phone"
+                    android:text="@={model.phone}"
+                    error="@{model.error_phone}"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
