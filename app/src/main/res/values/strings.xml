@@ -99,4 +99,7 @@
     <string name="department">Department</string>
     <string name="filter_your_results">Filter Result</string>
     <string name="reset">Reset</string>
+    <string name="user">User</string>
+    <string name="market_or_shop">Market or shop</string>
+    <string name="provider">Provider</string>
 </resources>

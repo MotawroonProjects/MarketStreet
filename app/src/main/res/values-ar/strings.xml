@@ -100,4 +100,7 @@
     <string name="department">القسم</string>
     <string name="filter_your_results">تصفية النتائج</string>
     <string name="reset">اعادة تعيين</string>
+    <string name="user">مستخدم</string>
+    <string name="market_or_shop">متجر او محل</string>
+    <string name="provider">مقدم خدمة</string>
 </resources>
