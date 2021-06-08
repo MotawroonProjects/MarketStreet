@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import com.app.market_street.databinding.ActivityHomeBinding;
 import com.app.market_street.language.Language;
 import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
+import com.app.market_street.uis.activity_cart.CartActivity;
 import com.app.market_street.uis.activity_home.fragments.Fragment_Department;
 import com.app.market_street.uis.activity_home.fragments.Fragment_Favorite;
 import com.app.market_street.uis.activity_home.fragments.Fragment_Home;
@@ -77,6 +79,14 @@ public class HomeActivity extends AppCompatActivity {
 
 
         updateFirebaseToken();
+        binding.flCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 //        if (userModel != null) {
 //            EventBus.getDefault().register(this);

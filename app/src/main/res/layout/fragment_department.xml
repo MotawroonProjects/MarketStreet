@@ -38,6 +38,7 @@
                 >
 
                 <FrameLayout
+                    android:id="@+id/flSupermarket"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -65,6 +66,7 @@
 
 
                 <FrameLayout
+                    android:id="@+id/flPharmacy"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -90,6 +92,7 @@
 
 
                 <FrameLayout
+                    android:id="@+id/flMarketUse"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"

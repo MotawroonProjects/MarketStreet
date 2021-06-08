@@ -1,4 +1,4 @@
-package com.app.market_street.adapter;
+package com.app.market_street.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,18 +10,19 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.market_street.R;
+import com.app.market_street.databinding.ProductRow2Binding;
 import com.app.market_street.databinding.ProductRowBinding;
-import com.app.market_street.databinding.SeconedHandMarketCatogryRowBinding;
+import com.app.market_street.uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity;
 
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class Product2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Object> list;
     private Context context;
     private LayoutInflater inflater;
     int i = 0;
 
-    public ProductAdapter(Context context, List<Object> list) {
+    public Product2Adapter(Context context, List<Object> list) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -32,7 +33,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        ProductRowBinding binding = DataBindingUtil.inflate(inflater, R.layout.product_row, parent, false);
+        ProductRow2Binding binding = DataBindingUtil.inflate(inflater, R.layout.product_row2, parent, false);
         return new MyHolder(binding);
 
     }
@@ -41,7 +42,13 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, int position) {
         MyHolder myHolder = (MyHolder) holder;
 
-
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SeconedHandMarketFilterActivity seconedHandMarketFilterActivity=(SeconedHandMarketFilterActivity)context;
+                seconedHandMarketFilterActivity.show();
+            }
+        });
 
 
     }
@@ -52,9 +59,9 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {
-        private ProductRowBinding binding;
+        private ProductRow2Binding binding;
 
-        public MyHolder(ProductRowBinding binding) {
+        public MyHolder(ProductRow2Binding binding) {
             super(binding.getRoot());
             this.binding = binding;
 

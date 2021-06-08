@@ -1,4 +1,4 @@
-package com.app.market_street.adapter;
+package com.app.market_street.adapters;
 
 import android.content.Context;
 import android.net.Uri;

@@ -28,7 +28,10 @@ import com.app.market_street.databinding.FragmentFavoriteBinding;
 import com.app.market_street.models.SliderModel;
 import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
+import com.app.market_street.uis.activity_ask_doctor.ServiceProviderActivity;
 import com.app.market_street.uis.activity_home.HomeActivity;
+import com.app.market_street.uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity;
+import com.app.market_street.uis.activity_super_market.SuperMarketActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +84,27 @@ public class Fragment_Department extends Fragment {
         binding.recViewShops.setLayoutManager(new GridLayoutManager(activity,3));
         shopAdapter = new ShopAdapter(new ArrayList<>(),activity,this);
         binding.recViewShops.setAdapter(shopAdapter);
-
+        binding.flMarketUse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity, SeconedHandMarketFilterActivity.class);
+                startActivity(intent);
+            }
+        });
+        binding.flSupermarket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity, SuperMarketActivity.class);
+                startActivity(intent);
+            }
+        });
+        binding.flPharmacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(activity, SuperMarketActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -144,9 +167,10 @@ public class Fragment_Department extends Fragment {
         }*/
     }
 
-
-
-
+    public void show() {
+        Intent intent=new Intent(activity, ServiceProviderActivity.class);
+        startActivity(intent);
+    }
 
 
     public class MyTask extends TimerTask {

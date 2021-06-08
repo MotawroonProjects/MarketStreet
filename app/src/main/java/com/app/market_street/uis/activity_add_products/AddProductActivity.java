@@ -3,7 +3,6 @@ package com.app.market_street.uis.activity_add_products;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,9 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -28,7 +25,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 
 import com.app.market_street.R;
-import com.app.market_street.adapter.ImageAdsAdapter;
+import com.app.market_street.adapters.ImageAdsAdapter;
 import com.app.market_street.databinding.ActivityAddProductBinding;
 import com.app.market_street.language.Language;
 import com.app.market_street.models.AddProductModel;
@@ -39,16 +36,11 @@ import com.app.market_street.share.Common;
 import com.app.market_street.uis.activity_map.MapActivity;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import io.paperdb.Paper;
 import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class AddProductActivity extends AppCompatActivity {
     private ActivityAddProductBinding binding;

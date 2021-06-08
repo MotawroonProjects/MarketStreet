@@ -77,4 +77,27 @@
     <string name="bio">نبذة مختصرة</string>
     <string name="service_price">سعر الخدمة</string>
     <string name="market_name">إسم المتجر</string>
+    <string name="seller_information">معلومات البائع</string>
+    <string name="add_to_cart">اضافه للسله</string>
+    <string name="copoun">اضف كوبون</string>
+    <string name="activation">تفعيل</string>
+    <string name="buy2">الشراء</string>
+    <string name="total">الاجمالى :</string>
+    <string name="cart">السله</string>
+    <string name="location_information">معلومات الموقع</string>
+    <string name="location_detials">تفاصيل الموقع</string>
+    <string name="write_more_details">اكتب المزيد من التفاصيل</string>
+    <string name="user_phone">رقم الهاتف</string>
+    <string name="confirm_location">تأكيد الموقع</string>
+    <string name="write_name">اكتب الاسم</string>
+    <string name="order_detials">تفاصيل الطلب</string>
+    <string name="shipping_site">موقع الشحن</string>
+    <string name="the_total_of_the_cart">إجمالى سلة المشتريات</string>
+    <string name="subtotal">المجموع الفرعى</string>
+    <string name="copoun2">الكوبون</string>
+    <string name="total_payments">إجمالى المدفوعات</string>
+    <string name="search_name">بحث بالاسم</string>
+    <string name="department">القسم</string>
+    <string name="filter_your_results">تصفية النتائج</string>
+    <string name="reset">اعادة تعيين</string>
 </resources>

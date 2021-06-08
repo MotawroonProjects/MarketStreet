@@ -76,4 +76,27 @@
     <string name="bio">bio</string>
     <string name="service_price">Service price</string>
     <string name="market_name">Market name</string>
+    <string name="seller_information">Seller information</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="copoun">Copoun</string>
+    <string name="activation">Activation</string>
+    <string name="buy2">Buy</string>
+    <string name="total">Total :</string>
+    <string name="cart">Cart</string>
+    <string name="location_information">Location Information</string>
+    <string name="location_detials">Location Detials</string>
+    <string name="write_more_details">Write More Detials</string>
+    <string name="user_phone">User Phone</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="write_name">Write Name</string>
+    <string name="order_detials">Order Detials</string>
+    <string name="shipping_site">Shipping site</string>
+    <string name="the_total_of_the_cart">Total Of The Cart</string>
+    <string name="subtotal">SubTotal</string>
+    <string name="copoun2">Copoun</string>
+    <string name="total_payments">Total Payment</string>
+    <string name="search_name">Search Name</string>
+    <string name="department">Department</string>
+    <string name="filter_your_results">Filter Result</string>
+    <string name="reset">Reset</string>
 </resources>

@@ -3,11 +3,9 @@ package com.app.market_street.uis.activity_seconed_hand_market_filter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.LayoutAnimationController;
 import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
@@ -20,24 +18,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.app.market_street.R;
-import com.app.market_street.adapter.Product2Adapter;
-import com.app.market_street.adapter.ProductAdapter;
-import com.app.market_street.adapter.SeconedHandMarketCategoryAdapter;
+import com.app.market_street.adapters.Product2Adapter;
+import com.app.market_street.adapters.ProductAdapter;
+import com.app.market_street.adapters.SeconedHandMarketCategoryAdapter;
 import com.app.market_street.databinding.ActivitySecondHandMarketFilterBinding;
 import com.app.market_street.interfaces.Listeners;
 import com.app.market_street.language.Language;
 import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
 import com.app.market_street.uis.activity_add_products.AddProductActivity;
+import com.app.market_street.uis.activity_cart.CartActivity;
+import com.app.market_street.uis.activity_home.HomeActivity;
+import com.app.market_street.uis.activity_seconed_market_product_detials.SeconedHandMarketProductDetialsActivity;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import io.paperdb.Paper;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class SeconedHandMarketFilterActivity extends AppCompatActivity implements Listeners.BackListener {
     private ActivitySecondHandMarketFilterBinding binding;
@@ -124,6 +121,13 @@ binding.recView.setLayoutManager(new LinearLayoutManager(SeconedHandMarketFilter
                 closeSheet();
             }
         });
+        binding.flCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SeconedHandMarketFilterActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
         binding.fabSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,8 +204,8 @@ binding.recView.setLayoutManager(new LinearLayoutManager(SeconedHandMarketFilter
     }
 
 
-
-
-
-
+    public void show() {
+        Intent intent=new Intent(SeconedHandMarketFilterActivity.this, SeconedHandMarketProductDetialsActivity.class);
+        startActivity(intent);
+    }
 }
