@@ -207,7 +207,7 @@
                         android:id="@+id/recViewShops"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/color2"
+                        android:background="@drawable/gradient_bg"
                         />
 
                     <ProgressBar

@@ -96,7 +96,9 @@ public class HomeActivity extends AppCompatActivity {
                     displayFragmentDepartment();
                     break;
                 case R.id.profile:
+                    //displayFragmentMarketProfile();
                     displayFragmentProfile();
+                    //displayFragmentProviderProfile();
                     break;
                 default:
                     if (!backPressed){

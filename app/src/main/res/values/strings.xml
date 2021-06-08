@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">RickTech</string>
     <string name="field_required">Field Required</string>
-    <string name="inv_email">Inviald Email</string>
-    <string name="phone">Phone</string>
+    <string name="inv_email">Invalid Email</string>
+    <string name="phone">Phone number</string>
     <string name="login">Login</string>
     <string name="please_enter_code_sent_to">Please Enter Code Sent To You</string>
     <string name="resend">Resend</string>

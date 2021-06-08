@@ -52,7 +52,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:visibility='@{model==null?View.GONE:View.VISIBLE,default=visible}'
                             >
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="70dp"
@@ -188,6 +187,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+           android:fillViewport="true"
             >
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/pager"
