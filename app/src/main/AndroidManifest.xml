@@ -24,7 +24,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".uis.activity_shop_details.ShopDetailsActivity"></activity>
+        <activity android:name=".uis.activity_shops.ShopsActivity"></activity>
+        <activity android:name=".uis.activity_shop_details.ShopDetailsActivity" />
         <activity
             android:name=".uis.activity_service_details.ServiceDetailsActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
@@ -88,7 +89,7 @@
             android:name=".uis.activity_verification_code.VerificationCodeActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".uis.activity_login.ClientLoginActivity"></activity>
+        <activity android:name=".uis.activity_login.ClientLoginActivity" />
         <activity
             android:name=".uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"

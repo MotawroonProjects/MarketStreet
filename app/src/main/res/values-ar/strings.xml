@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ريك تك</string>
+    <string name="app_name">شارع السوق</string>
     <string name="field_required">الحقل مطلوب</string>
     <string name="map_api_key">AIzaSyAnjvMAJEmiAv3yeCDUXWv-PboXiT_uaoQ</string>
 
@@ -105,4 +105,10 @@
     <string name="provider">مقدم خدمة</string>
     <string name="call">إتصال</string>
     <string name="whatsapp">واتس اب</string>
+    <string name="filter">تصفية</string>
+    <string name="search2">بحث بالاسم...</string>
+    <string name="add_product">إضافة منتج</string>
+    <string name="product_image">صورة المنتج</string>
+    <string name="add">إضافة</string>
+    <string name="add_department">إضافة قسم</string>
 </resources>

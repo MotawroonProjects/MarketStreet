@@ -32,6 +32,7 @@ import com.app.market_street.uis.activity_ask_doctor.ServiceProviderActivity;
 import com.app.market_street.uis.activity_home.HomeActivity;
 import com.app.market_street.uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity;
 import com.app.market_street.uis.activity_shop_details.ShopDetailsActivity;
+import com.app.market_street.uis.activity_shops.ShopsActivity;
 import com.app.market_street.uis.activity_super_market.SuperMarketActivity;
 
 import java.util.ArrayList;
@@ -173,7 +174,10 @@ public class Fragment_Department extends Fragment {
         startActivity(intent);
     }
 
-
+    public void setShopCategoryData(Object o) {
+        Intent intent = new Intent(activity, ShopsActivity.class);
+        startActivity(intent);
+    }
 
 
     public class MyTask extends TimerTask {
