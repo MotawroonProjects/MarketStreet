@@ -21,8 +21,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".uis.activity_login.ClientLoginActivity">
-
+            android:background="@color/white"
+            >
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewBack"
@@ -98,16 +98,23 @@
                             />
                     </FrameLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
-                        app:startIconDrawable="@drawable/ic_user"
-                        app:startIconTint="@color/black"
-                        app:hintEnabled="false"
-                        app:passwordToggleEnabled="false"
-                        android:background="@color/white"
-                        app:prefixTextColor="@color/black"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         >
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_user"
+                            app:tint="@color/black"
+                            android:layout_gravity="center_vertical"
+                            android:padding="2dp"
+                            />
                         <EditText
                             android:id="@+id/edtName"
                             android:layout_width="match_parent"
@@ -119,18 +126,25 @@
                             android:hint="@string/market_name"
                             android:text="@={model.name}"
                             error="@{model.error_name}"
-
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
                             />
-                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray19"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:orientation="horizontal"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         >
                         <Space
-                            android:layout_width="12dp"
+                            android:layout_width="8dp"
                             android:layout_height="0dp"/>
                         <ImageView
                             android:layout_width="24dp"
@@ -148,16 +162,16 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/gray14"/>
+                        android:background="@color/gray19"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:orientation="horizontal"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         >
                         <Space
-                            android:layout_width="12dp"
+                            android:layout_width="8dp"
                             android:layout_height="0dp"/>
                         <ImageView
                             android:layout_width="24dp"
@@ -175,20 +189,34 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/gray14"/>
-                    <com.google.android.material.textfield.TextInputLayout
+                        android:background="@color/gray19"/>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
-                        app:startIconDrawable="@drawable/ic_call4"
-                        app:startIconTint="@color/black"
-                        app:hintEnabled="false"
-                        app:passwordToggleEnabled="false"
-                        android:background="@color/white"
-                        app:prefixText="+20"
-                        app:prefixTextColor="@color/black"
-                        android:layout_marginTop="8dp"
-
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         >
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_call4"
+                            app:tint="@color/black"
+                            android:layout_gravity="center_vertical"
+                            android:padding="2dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:text="+20"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            />
                         <EditText
                             android:id="@+id/edtPhone"
                             android:layout_width="match_parent"
@@ -201,20 +229,26 @@
                             android:hint="@string/phone"
                             android:text="@={model.phone}"
                             error="@{model.error_phone}"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
 
                             />
-                    </com.google.android.material.textfield.TextInputLayout>
 
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray19"/>
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:orientation="horizontal"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         >
                         <Space
-                            android:layout_width="12dp"
+                            android:layout_width="8dp"
                             android:layout_height="0dp"/>
                         <ImageView
                             android:layout_width="24dp"
@@ -246,7 +280,9 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/gray14"/>
+                        android:background="@color/gray19"
+                        android:layout_marginTop="5dp"
+                        />
 
 
 
@@ -261,6 +297,7 @@
                         android:textColor="@color/white"
                         android:text="@string/sign_up"
                         android:layout_gravity="center_horizontal"
+
                         />
                 </LinearLayout>
 

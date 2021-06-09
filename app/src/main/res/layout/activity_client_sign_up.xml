@@ -17,7 +17,9 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -98,30 +100,90 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 >
-                <com.google.android.material.textfield.TextInputLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    app:startIconDrawable="@drawable/ic_user"
-                    app:startIconTint="@color/black"
-                    app:hintEnabled="false"
-                    app:passwordToggleEnabled="false"
-                    android:background="@color/white"
-                    app:prefixTextColor="@color/black"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_user"
+                        app:tint="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:padding="2dp"
+                        />
                     <EditText
                         android:id="@+id/edtName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white"
+                        android:background="@color/transparent"
                         android:singleLine="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:hint="@string/name"
                         android:text="@={model.name}"
                         error="@{model.error_name}"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray19"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_call4"
+                        app:tint="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:padding="2dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="+20"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <EditText
+                        android:id="@+id/edtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:inputType="number"
+                        android:hint="@string/phone"
+                        android:text="@={model.phone}"
+                        error="@{model.error_phone}"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
 
                         />
-                </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray19"/>
 
             </LinearLayout>
 

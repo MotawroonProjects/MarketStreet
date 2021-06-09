@@ -28,10 +28,8 @@
     <color name="gray15">#e3e3e3</color>
     <color name="gray16">#545454</color>
     <color name="gray17">#F1F1F1</color>
-<color name="gray18">#D3D3D3</color>
-
-
-
+    <color name="gray18">#D3D3D3</color>
+    <color name="gray19">#E8E8E8</color>
 
 
     <color name="book_trans">#99000000</color>

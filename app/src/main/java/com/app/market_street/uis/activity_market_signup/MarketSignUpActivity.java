@@ -55,7 +55,7 @@ public class MarketSignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_provider_sign_up);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_market_sign_up);
         initView();
     }
 

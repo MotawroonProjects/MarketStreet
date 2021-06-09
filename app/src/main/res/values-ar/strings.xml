@@ -103,4 +103,6 @@
     <string name="user">مستخدم</string>
     <string name="market_or_shop">متجر او محل</string>
     <string name="provider">مقدم خدمة</string>
+    <string name="call">إتصال</string>
+    <string name="whatsapp">واتس اب</string>
 </resources>

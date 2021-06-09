@@ -25,6 +25,7 @@ import com.app.market_street.language.Language;
 import com.app.market_street.uis.activity_cart.CartActivity;
 import com.app.market_street.uis.activity_filter.FilterActivity;
 import com.app.market_street.uis.activity_home.HomeActivity;
+import com.app.market_street.uis.activity_service_details.ServiceDetailsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class ServiceProviderActivity extends AppCompatActivity implements Listen
     private String lang;
 
     private ServiceProviderAdapter adapter;
-private List<Object> list;
+    private List<Object> list;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -63,10 +64,10 @@ private List<Object> list;
         binding.setBackListener(this);
         binding.setFilter("");
 
-        adapter = new ServiceProviderAdapter(this,list);
+        adapter = new ServiceProviderAdapter(this, list);
         binding.recView.setLayoutManager(new LinearLayoutManager(this));
         binding.recView.setAdapter(adapter);
-binding.progBar.setVisibility(View.GONE);
+        binding.progBar.setVisibility(View.GONE);
 
         binding.imageClearFilter.setOnClickListener(v -> {
             binding.setFilter("");
@@ -74,7 +75,7 @@ binding.progBar.setVisibility(View.GONE);
 
         });
         binding.editQuery.setOnEditorActionListener((v, actionId, event) -> {
-            if (actionId== EditorInfo.IME_ACTION_SEARCH){
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 String query = binding.editQuery.getText().toString().trim();
                 search(query);
             }
@@ -94,23 +95,19 @@ binding.progBar.setVisibility(View.GONE);
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (s.toString().isEmpty()){
+                if (s.toString().isEmpty()) {
                     search("all");
                 }
             }
         });
         search("all");
-binding.imageFilter.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(ServiceProviderActivity.this, FilterActivity.class);
-        startActivity(intent);
-    }
-});
+        binding.imageFilter.setOnClickListener(v -> {
+            Intent intent = new Intent(ServiceProviderActivity.this, FilterActivity.class);
+            startActivity(intent);
+        });
     }
 
-    private void search(String query)
-    {
+    private void search(String query) {
 
 
     }
@@ -119,7 +116,7 @@ binding.imageFilter.setOnClickListener(new View.OnClickListener() {
     @Override
     public void back() {
 
-            finish();
+        finish();
 
 
     }
@@ -130,8 +127,8 @@ binding.imageFilter.setOnClickListener(new View.OnClickListener() {
     }
 
 
-
-
-
-
+    public void setItemData(Object o) {
+        Intent intent = new Intent(this, ServiceDetailsActivity.class);
+        startActivity(intent);
+    }
 }

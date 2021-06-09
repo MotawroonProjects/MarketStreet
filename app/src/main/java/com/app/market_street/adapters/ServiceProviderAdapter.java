@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.market_street.R;
 import com.app.market_street.databinding.ServiceProviderRowBinding;
+import com.app.market_street.uis.activity_ask_doctor.ServiceProviderActivity;
 
 import java.util.List;
 
@@ -18,11 +19,13 @@ public class ServiceProviderAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     private LayoutInflater inflater;
     private Context context;
     private List<Object> list;
+    private ServiceProviderActivity activity;
 
     public ServiceProviderAdapter(Context context, List<Object> list) {
         inflater = LayoutInflater.from(context);
         this.context = context;
         this.list = list;
+        activity = (ServiceProviderActivity) context;
     }
 
     @NonNull
@@ -39,7 +42,7 @@ public class ServiceProviderAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, int position) {
         DoctorHolder doctorHolder = (DoctorHolder) holder;
         holder.itemView.setOnClickListener(v -> {
-
+            activity.setItemData(null);
 
         });
     }

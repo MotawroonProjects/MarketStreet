@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +23,7 @@ import com.app.market_street.language.Language;
 import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
 import com.app.market_street.uis.activity_cart.CartActivity;
+import com.app.market_street.uis.activity_choose_sign_up.ChooseSignUpActivity;
 import com.app.market_street.uis.activity_home.fragments.Fragment_Department;
 import com.app.market_street.uis.activity_home.fragments.Fragment_Favorite;
 import com.app.market_street.uis.activity_home.fragments.Fragment_Home;
@@ -47,6 +52,8 @@ public class HomeActivity extends AppCompatActivity {
     private UserModel userModel;
     private String lang;
     private boolean backPressed= false;
+    private ActivityResultLauncher<Intent> launcher;
+    private int req =0;
 
 
     protected void attachBaseContext(Context newBase) {
@@ -72,6 +79,12 @@ public class HomeActivity extends AppCompatActivity {
         lang = Paper.book().read("lang", "ar");
         binding.setLang(lang);
 
+        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+
+            }
+        });
 
 
 
@@ -79,12 +92,9 @@ public class HomeActivity extends AppCompatActivity {
 
 
         updateFirebaseToken();
-        binding.flCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this, CartActivity.class);
-                startActivity(intent);
-            }
+        binding.flCart.setOnClickListener(v -> {
+            Intent intent=new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(intent);
         });
 
 
@@ -100,16 +110,28 @@ public class HomeActivity extends AppCompatActivity {
                     displayFragmentOffer();
                     break;
                 case R.id.favorite:
-                    displayFragmentFavorite();
-                    break;
+                    if (userModel==null){
+                        return false;
+                    }else {
+                        displayFragmentFavorite();
+
+                        break;
+                    }
                 case R.id.departments:
                     displayFragmentDepartment();
                     break;
                 case R.id.profile:
-                    //displayFragmentMarketProfile();
-                    displayFragmentProfile();
-                    //displayFragmentProviderProfile();
-                    break;
+                    if (userModel==null){
+                        navigateToChooseActivity();
+                        return false;
+                    }else {
+                        //displayFragmentMarketProfile();
+                        //displayFragmentProfile();
+                        //displayFragmentProviderProfile();
+                        break;
+                    }
+
+
                 default:
                     if (!backPressed){
                         displayFragmentMain();
@@ -120,6 +142,13 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+
+    }
+
+    private void navigateToChooseActivity() {
+        req = 1;
+        Intent intent = new Intent(this, ChooseSignUpActivity.class);
+        launcher.launch(intent);
 
     }
 

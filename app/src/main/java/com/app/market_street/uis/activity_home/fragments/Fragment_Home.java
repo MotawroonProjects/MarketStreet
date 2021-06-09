@@ -21,6 +21,7 @@ import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
 import com.app.market_street.uis.activity_home.HomeActivity;
 import com.app.market_street.uis.activity_seconed_hand_market_filter.SeconedHandMarketFilterActivity;
+import com.app.market_street.uis.activity_shop_details.ShopDetailsActivity;
 import com.app.market_street.uis.activity_super_market.SuperMarketActivity;
 
 import java.util.ArrayList;
@@ -39,9 +40,9 @@ public class Fragment_Home extends Fragment {
     private UserModel userModel;
     private CommonShopAdapter commonShopAdapter;
     private OfferAdapter offerAdapter;
-   /* private SliderAdapter sliderAdapter;
-   */
-   private List<SliderModel> sliderModelList;
+    /* private SliderAdapter sliderAdapter;
+     */
+    private List<SliderModel> sliderModelList;
 
     private Timer timer;
     private TimerTask timerTask;
@@ -68,31 +69,31 @@ public class Fragment_Home extends Fragment {
         Paper.init(activity);
         lang = Paper.book().read("lang", "ar");
         binding.setLang(lang);
-        binding.recViewShops.setLayoutManager(new LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false));
-        commonShopAdapter = new CommonShopAdapter(new ArrayList<>(),activity,this);
+        binding.recViewShops.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false));
+        commonShopAdapter = new CommonShopAdapter(new ArrayList<>(), activity, this);
         binding.recViewShops.setAdapter(commonShopAdapter);
 
-        binding.recViewOffers.setLayoutManager(new LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false));
-        offerAdapter = new OfferAdapter(new ArrayList<>(),activity,this);
+        binding.recViewOffers.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false));
+        offerAdapter = new OfferAdapter(new ArrayList<>(), activity, this);
         binding.recViewOffers.setAdapter(offerAdapter);
-binding.cardMarketUse.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(activity, SeconedHandMarketFilterActivity.class);
-        startActivity(intent);
-    }
-});
-binding.flSupermarket.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(activity, SuperMarketActivity.class);
-        startActivity(intent);
-    }
-});
+        binding.cardMarketUse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, SeconedHandMarketFilterActivity.class);
+                startActivity(intent);
+            }
+        });
+        binding.flSupermarket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, SuperMarketActivity.class);
+                startActivity(intent);
+            }
+        });
         binding.flPharmacy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(activity, SuperMarketActivity.class);
+                Intent intent = new Intent(activity, SuperMarketActivity.class);
                 startActivity(intent);
             }
         });
@@ -160,10 +161,6 @@ binding.flSupermarket.setOnClickListener(new View.OnClickListener() {
     }
 
 
-
-
-
-
     public class MyTask extends TimerTask {
         @Override
         public void run() {
@@ -192,6 +189,11 @@ binding.flSupermarket.setOnClickListener(new View.OnClickListener() {
             timerTask.cancel();
         }
 
+    }
+
+    public void setShopItemData(Object o) {
+        Intent intent = new Intent(activity, ShopDetailsActivity.class);
+        startActivity(intent);
     }
 
 }
