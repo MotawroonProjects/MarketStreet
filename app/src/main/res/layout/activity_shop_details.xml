@@ -90,7 +90,7 @@
                         android:layout_marginBottom="5dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="3dp"
-                        app:contentPadding="8dp">
+                        app:contentPadding="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -105,11 +105,16 @@
                                 android:layout_height="60dp"
                                 android:src="@drawable/market_logo"
                                 />
+                            <Space
+                                android:layout_width="8dp"
+                                android:layout_height="0dp"/>
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
                                 >
                                 <LinearLayout
                                     android:layout_width="match_parent"
