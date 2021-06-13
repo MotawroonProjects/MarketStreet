@@ -122,7 +122,8 @@ public class HomeActivity extends AppCompatActivity {
                     break;
                 case R.id.profile:
                     if (userModel==null){
-                        navigateToChooseActivity();
+                        displayFragmentMarketProfile();
+                        //navigateToChooseActivity();
                         return false;
                     }else {
                         //displayFragmentMarketProfile();

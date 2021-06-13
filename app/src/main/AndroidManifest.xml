@@ -24,7 +24,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".uis.activity_shops.ShopsActivity"></activity>
+        <activity android:name=".uis.activity_orders.OrdersActivity"></activity>
+        <activity android:name=".uis.activity_shops.ShopsActivity" />
         <activity android:name=".uis.activity_shop_details.ShopDetailsActivity" />
         <activity
             android:name=".uis.activity_service_details.ServiceDetailsActivity"

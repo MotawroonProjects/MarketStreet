@@ -23,6 +23,7 @@ import com.app.market_street.databinding.FragmentProfileBinding;
 import com.app.market_street.models.UserModel;
 import com.app.market_street.preferences.Preferences;
 import com.app.market_street.uis.activity_home.HomeActivity;
+import com.app.market_street.uis.activity_orders.OrdersActivity;
 
 import io.paperdb.Paper;
 
@@ -58,7 +59,10 @@ public class Fragment_Market_Account extends Fragment {
         binding.setLang(lang);
         binding.setModel(userModel);
 
-
+        binding.llOrders.setOnClickListener(v -> {
+            Intent intent = new Intent(activity, OrdersActivity.class);
+            startActivity(intent);
+        });
 
 
 

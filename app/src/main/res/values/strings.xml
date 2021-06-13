@@ -110,4 +110,10 @@
     <string name="product_image">Product image</string>
     <string name="add">Add</string>
     <string name="add_department">Add department</string>
+    <string name="order_num">Order num</string>
+    <string name="amount">Amount</string>
+    <string name="current">Current</string>
+    <string name="previous">Previous</string>
+    <string name="accept">Accept</string>
+    <string name="refuse">Refuse</string>
 </resources>

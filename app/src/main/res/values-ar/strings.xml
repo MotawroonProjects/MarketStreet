@@ -111,4 +111,10 @@
     <string name="product_image">صورة المنتج</string>
     <string name="add">إضافة</string>
     <string name="add_department">إضافة قسم</string>
+    <string name="order_num">رقم الطلب</string>
+    <string name="amount">الكمية</string>
+    <string name="current">الحالية</string>
+    <string name="previous">السابقة</string>
+    <string name="accept">قبول</string>
+    <string name="refuse">رفض</string>
 </resources>

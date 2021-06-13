@@ -77,10 +77,9 @@
                 android:id="@+id/scrollView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fillViewport="true"
-                android:fitsSystemWindows="true"
                 android:layout_marginBottom="60dp"
-                >
+                android:fillViewport="true"
+                android:fitsSystemWindows="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -111,45 +110,47 @@
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <FrameLayout
-        android:id="@+id/flUploadImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-      android:background="@drawable/small_rounded_stroke_white_bg"
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="false"
-            android:gravity="center"
-            android:longClickable="false"
-            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_add"
-                app:tint="@color/gray4" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/flUploadImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/small_rounded_stroke_white_bg">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:longClickable="false"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_add"
+                                    app:tint="@color/gray4" />
 
 
+                            </LinearLayout>
+                        </FrameLayout>
 
-        </LinearLayout>
-    </FrameLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            tools:ignore="RtlCompat" />
 
-</LinearLayout>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -244,7 +245,6 @@
                     </FrameLayout>
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -261,7 +261,6 @@
                             app:tint="@color/colorAccent" />
 
                         <TextView
-                            error="@{model.error_address}"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -355,7 +354,6 @@
                             android:paddingStart="10dp"
                             android:paddingEnd="10dp"
                             android:singleLine="true"
-                            android:text="@={model.whatsappnum}"
                             android:textColor="@color/black"
                             android:textColorHint="@color/gray4"
                             android:textSize="14sp"
@@ -416,7 +414,6 @@
                     </LinearLayout>
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -472,20 +469,21 @@
                     </LinearLayout>
 
 
-
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
+
         <Button
             android:id="@+id/btnSend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
             android:text="@string/publish"
             android:textColor="@color/white"
-            android:layout_gravity="bottom"
-            android:background="@color/colorAccent"
             android:textSize="16sp" />
+
         <net.cachapa.expandablelayout.ExpandableLayout
             android:id="@+id/expandLayout"
             android:layout_width="match_parent"
